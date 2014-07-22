@@ -1,0 +1,10 @@
+{
+  "name": "nz-mps-nodejs",
+  "description": "Express JSON API with list of New Zealand MPs",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.x",
+    "request": "2.x",
+    "cheerio": "0.17.x"
+  }
+}
