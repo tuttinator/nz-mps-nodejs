@@ -8,7 +8,14 @@ request(mpListUrl, function(error, response, html) {
   if(!error) {
     var $ = cheerio.load(html);
     $('tbody tr').each(function() {
-      console.log($(this).text().trim());
+      var cells = $(this).children('td');
+      var aTag = $(cells).first().find('a');
+      var name = $(aTag).text();
+      var link = 'http://www.parliament.nz' + $(aTag).attr('href');
+      var electorateDetails = $(cells).last().text().trim();
+      console.log(name);
+      console.log(link);
+      console.log(electorateDetails);
     });
   }
 
